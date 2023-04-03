@@ -2,7 +2,7 @@ import React from "react";
 import { formatDistanceToNow } from "date-fns";
 import { tr } from "date-fns/locale";
 
-import { notSil } from "../actions";
+import { notSilAPI } from "../actions";
 import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -25,7 +25,7 @@ export default function Post({ item }) {
   function handleSil(note) {
     // burada ilgili eylemi dispatch edin
     // sonra toast mesajı gösterin
-    dispatch(notSil(note));
+    dispatch(notSilAPI(note));
     deletedNote();
   }
 
